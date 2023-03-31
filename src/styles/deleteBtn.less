@@ -1,0 +1,15 @@
+@import 'variables.less';
+
+.deleteBtn {
+  width: 90%;
+  border: none;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 200ms ease-in-out;
+  .dFlex(@flexDirection: row, @gap: 1rem);
+  background-color: @primaryVariant;
+  &:hover {
+    background-color: @secondaryVariant;
+  }
+}

@@ -1,0 +1,17 @@
+@import 'variables.less';
+
+.card {
+  width: 90%;
+  background-color: @secondaryVariant;
+  padding: 1rem 1.5rem;
+  color: @bgColor;
+  cursor: pointer;
+  .dFlex(@justifyContent: space-between, @flexDirection: row);
+  &__icons {
+    .dFlex(@flexDirection: row, @gap: 1rem);
+  }
+  &__completed {
+    text-decoration: line-through;
+    color: @primaryColor;
+  }
+}
