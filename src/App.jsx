@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import '~/less/App.less';
+import '~less/App.less';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import Card from '~/Card';
 import TodoForm from '~/TodoForm';
@@ -41,7 +41,7 @@ function App() {
   const editTodo = (id) =>
     setTodos(
       todos.map((todo) =>
-        todo.id === id ? { ...todo, isEditing: !todo.isEditing } : todo
+        todo.id === id ? { ...todo,isEditing: !todo.isEditing } : todo
       )
     );
 
@@ -60,7 +60,7 @@ function App() {
         <TodoForm addTodo={addTodo} />
         {todos.map((todo) =>
           todo.isEditing ? (
-            <CardEdit editTodo={editTask} task={todo} />
+            <CardEdit editTodo={editTask} task={todo} key={todo.id}/>
           ) : (
             <Card
               key={todo.id}
@@ -75,7 +75,7 @@ function App() {
           <p>No pending tasks</p>
         ) : (
           <button className="deleteBtn" onClick={deleteAll}>
-            <i class="bi bi-trash3"></i>
+            <i className="bi bi-trash3"></i>
             Delete All
           </button>
         )}

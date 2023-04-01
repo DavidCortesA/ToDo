@@ -12,6 +12,7 @@ const CardEdit = ({ editTodo, task }) => {
       <input
         type="text"
         value={value}
+        key={task.id}
         onChange={(e) => setValue(e.target.value)}
         className="todoForm__input"
         placeholder="Update task"
